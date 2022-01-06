@@ -1,0 +1,16 @@
+image: ksdocker1001/sfdxscanner
+
+pipelines:
+  custom:
+    sfdx-scanner:
+      - step:
+          caches:
+          - node
+          artifacts:
+            - reports/**
+          name: 'Code Quality - sfdx Scanner'
+          script:
+            - mkdir $FOLDER
+            - export TARGET_SOURCE="force-app"
+            - wget -cO - $PMD_CONFIG_URL > $PMD_CONFIG
+            - sfdx scanner:run --format csv --target $TARGET_SOURCE --pmdconfig $PMD_CONFIG --engine pmd --outfile $FOLDER/$SCANNER_CSV_OUTPUT
