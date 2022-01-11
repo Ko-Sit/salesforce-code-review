@@ -5,7 +5,7 @@ This is a set of scanner commands for Salesforce development
 ## Usage
 
 ```
-wget https://example.com/scanner-v0.1.zip # release zip url
+wget https://github.com/Ko-Sit/salesforce-code-review/releases/download/0.1/scanner-v0.1.zip # release zip url
 
 unzip scanner-v0.1.zip
 
