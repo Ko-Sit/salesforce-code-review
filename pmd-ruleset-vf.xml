@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset xmlns="http://pmd.sourceforge.net/ruleset/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Custom Rules" xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
+    <description>Visualforce Code Review Rules</description>
+    <rule ref="category/ecmascript/codestyle.xml" />
+    <rule ref="category/ecmascript/bestpractices.xml" />
+    <rule ref="category/ecmascript/design.xml" />
+    <rule ref="category/ecmascript/errorprone.xml" />
+    <rule ref="category/ecmascript/documentation.xml" />
+    <rule ref="category/ecmascript/errorprone.xml" />
+    <rule ref="category/ecmascript/performance.xml" />
+    <rule ref="category/ecmascript/security.xml" />
+    <rule ref="category/ecmascript/multithreading.xml" />
+</ruleset>
