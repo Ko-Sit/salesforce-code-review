@@ -7,4 +7,5 @@ sfdx scanner:run --format html \
     --target $TARGET_SOURCE \
     --pmdconfig $PMD_CONFIG_APEX \
     --engine pmd \
+    --severity-threshold=1 \
     --outfile $REPORT_HTML

@@ -6,6 +6,7 @@ export NODE_OPTIONS=--max_old_space_size=4096 # avoid heap limit
 sfdx scanner:run --format html \
     --target $TARGET_SOURCE_CPD \
     --engine cpd \
+    --severity-threshold=1 \
     --outfile $REPORT_HTML
 
 

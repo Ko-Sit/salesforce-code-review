@@ -6,4 +6,5 @@ sfdx scanner:run --engine "eslint-lwc" \
     --format html \
     --category "LWC" \
     --outfile $REPORT_HTML \
+    --severity-threshold=1 \
     --target $TARGET_SOURCE_LWC
