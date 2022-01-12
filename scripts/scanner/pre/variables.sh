@@ -6,4 +6,5 @@ export PMD_CONFIG_URL_JS="https://raw.githubusercontent.com/Ko-Sit/salesforce-co
 export PMD_CONFIG_JS="$RULES_FOLDER/js-rules.xml"
 export PMD_CONFIG_URL_VF="https://raw.githubusercontent.com/Ko-Sit/salesforce-code-review/main/pmd-ruleset-vf.xml"
 export PMD_CONFIG_VF="$RULES_FOLDER/vf-rules.xml"
-
+export TARGET_SOURCE="${TARGET_SOURCE:=force-app}"
+export TARGET_SOURCE_CPD="force-app/main/default/classes/service"

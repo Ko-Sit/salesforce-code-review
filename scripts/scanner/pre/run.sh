@@ -1,5 +1,5 @@
 #!/bin/bash
 echo "running pre-run"
-source ./pre/variables.sh
+source ./scanner/pre/variables.sh
 rm -rf $REPORT_FOLDER
 mkdir $REPORT_FOLDER
