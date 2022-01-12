@@ -8,3 +8,4 @@ export PMD_CONFIG_URL_VF="https://raw.githubusercontent.com/Ko-Sit/salesforce-co
 export PMD_CONFIG_VF="$RULES_FOLDER/vf-rules.xml"
 export TARGET_SOURCE="${TARGET_SOURCE:=force-app}"
 export TARGET_SOURCE_CPD="force-app/main/default/classes/service"
+export TARGET_SOURCE_LWC="force-app/main/default/lwc"
