@@ -1,9 +1,9 @@
 #!/bin/bash
 source ./scanner/pre/variables.sh
-REPORT_NAME="scan-eslint-lwc.csv"
-REPORT_PATH="$REPORT_FOLDER/$REPORT_NAME"
+REPORT_NAME="scan-eslint-lwc.html"
+REPORT_HTML="$REPORT_FOLDER/$REPORT_NAME"
 sfdx scanner:run --engine "eslint-lwc" \
-    --format csv \
+    --format html \
     --category "LWC" \
-    --outfile $REPORT_PATH \
+    --outfile $REPORT_HTML \
     --target $TARGET_SOURCE_LWC
