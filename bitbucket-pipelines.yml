@@ -1,16 +1,23 @@
-image: ksdocker1001/sfdxscanner
+image:
+  name: atlassian/default-image:2
 
+definitions:
+  steps:
+    - step: &code-analysis
+        name: Code Analysis
+        image: ksdocker1001/sfdxscanner:1.2
+        caches:
+          - node
+        artifacts:
+          - reports/**
+        script:
+          - /bin/bash ./scanner-compile.sh
 pipelines:
+  pull-requests:
+    "**":
+      - step:
+          <<: *code-analysis
   custom:
     sfdx-scanner:
       - step:
-          caches:
-          - node
-          artifacts:
-            - reports/**
-          name: 'Code Quality - sfdx Scanner'
-          script:
-            - mkdir $FOLDER
-            - export TARGET_SOURCE="force-app"
-            - wget -cO - $PMD_CONFIG_URL > $PMD_CONFIG
-            - sfdx scanner:run --format csv --target $TARGET_SOURCE --pmdconfig $PMD_CONFIG --engine pmd --outfile $FOLDER/$SCANNER_CSV_OUTPUT
+          <<: *code-analysis
